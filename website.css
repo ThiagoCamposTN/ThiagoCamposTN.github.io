@@ -1,7 +1,25 @@
-#sidebar{
+#sidebar-1{
     background-color: #66a5b5;
 }
 
-#principal{
+#principal-1{
     background-color: #d2eae7;
+}
+
+#sidebar-2{
+    background-color: #66a5b5;
+}
+
+#principal-2{
+    background-color: #d2eae7;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible);
+
+body {
+    font-family: 'Atkinson Hyperlegible';
+}
+
+.deprecated-text-justify {
+    text-align: justify;
 }
