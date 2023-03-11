@@ -15,3 +15,13 @@ body {
 .deprecated-text-justify {
     text-align: justify;
 }
+
+.btn-tag {
+    pointer-events: none;
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .75rem;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    user-select: auto;
+}
