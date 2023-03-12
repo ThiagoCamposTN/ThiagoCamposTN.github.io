@@ -1,3 +1,5 @@
+var esta_em_pt_br = true;
+
 function RevelarEmail(){
     document.getElementById("emailBtn").hidden = true;
     var email = document.getElementById("email");
@@ -17,4 +19,27 @@ function Desembaralhar(entrada, numeroBase){
     }
 
     return resultado;
+}
+
+function SwitchToEnglish(){
+    esta_em_pt_br = !esta_em_pt_br;
+
+    if (esta_em_pt_br){
+        document.querySelectorAll(".pt-br").forEach((text) => {
+            text.hidden = false;
+        });
+
+        document.querySelectorAll(".en").forEach((text) => {
+            text.hidden = true;
+        });
+    }
+    else{
+        document.querySelectorAll(".pt-br").forEach((text) => {
+            text.hidden = true;
+        });
+
+        document.querySelectorAll(".en").forEach((text) => {
+            text.hidden = false;
+        });
+    }
 }
