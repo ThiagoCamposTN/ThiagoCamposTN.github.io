@@ -1,9 +1,11 @@
 .sidebar{
-    background-color: #66a5b5;
+    /* background-color: #66a5b5; */
+    background-color: #87ceeb;
 }
 
 .principal{
-    background-color: #d2eae7;
+    /* background-color: #d2eae7; */
+    background-color: #b4e0f2;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible);
