@@ -1,4 +1,10 @@
-var esta_em_pt_br = true;
+var switch_de_lingua = document.querySelector("input[name='switch']");
+
+switch_de_lingua.addEventListener('change', function() {
+    TrocarLingua(this.checked);
+});
+
+TrocarLingua(switch_de_lingua.checked);
 
 function RevelarEmail(){
     document.getElementById("emailBtn").hidden = true;
@@ -21,16 +27,13 @@ function Desembaralhar(entrada, numeroBase){
     return resultado;
 }
 
-function SwitchToEnglish(){
-    esta_em_pt_br = !esta_em_pt_br;
+function TrocarLingua(esta_em_pt_br){
+    var title = document.querySelector("title");
 
-    var title = document.querySelector("title")
-
-    if(esta_em_pt_br){
+    if (esta_em_pt_br) {
         document.title = "Thiago Campos - Currículo";
         title.lang = "pt-br";
-    }
-    else{
+    } else {
         document.title = "Thiago Campos - Resume";
         title.lang = "en";
     }

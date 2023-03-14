@@ -17,7 +17,7 @@
             <div class="sidebar col-12 col-md-3 container p-4 pb-2">
                 <div class="form-check form-switch">
                     <i class="bi bi-translate"></i>
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="switch" onclick="SwitchToEnglish()">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="switch">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Switch to english</label>
                 </div>
                 <div class="p-2">
@@ -139,7 +139,13 @@
                 </div>
                 <div class="row pt-3 pb-2">
                     <div class="col-2 d-flex align-items-center justify-content-center"><i class="bi bi-envelope-at-fill"></i></div>
-                    <div class="col-10"><button id="emailBtn" type="button" class="btn btn-secondary btn-sm" onclick="RevelarEmail()"><span lang="pt-br">Revelar email</span><span lang="en" hidden>Reveal email</span></button><span id="email" hidden>email</span></div>
+                    <div class="col-10">
+                        <button id="emailBtn" type="button" class="btn btn-secondary btn-sm" onclick="RevelarEmail()">
+                            <span lang="pt-br">Revelar email</span>
+                            <span lang="en" hidden>Reveal email</span>
+                        </button>
+                        <span id="email" hidden>email</span>
+                    </div>
                 </div>
                 <div class="row pb-2">
                     <div class="col-2 d-flex align-items-center justify-content-center"><i class="bi bi-geo-alt-fill"></i></div>
@@ -223,14 +229,14 @@
         </div>
         <div class="row">
             <div class="sidebar col-12 col-md-3 container p-4 order-md-1 order-2 pt-0 pt-3">
-                <div class="row fs-4 principal">
+                <!-- <div class="row fs-4 principal">
                     <div class="col-2">
                         <i class="bi bi-person-vcard-fill"></i>
                     </div>
                     <div class="col-4 col-md-3">
                         <p class="mb-0">Um</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="principal col-12 col-md-9 order-md-2 order-1 px-5 pt-4">
                 <div class="row fs-3">
@@ -263,7 +269,7 @@
                         </div>
                         <div class="col-10 mt-2">
                             <p class="fs-5 mb-2">EF Standard English Test (EF SET)</p>
-                            <div class="position-relative m-4">
+                            <div class="position-relative my-5 mx-md-5">
                                 <div class="progress bg-warning" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
                                     <div class="progress-bar bg-secondary" style="width: 80%"></div>
                                 </div>
@@ -272,7 +278,10 @@
                                 <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem; left: 40%;">B1</button>
                                 <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem; left: 60%;">B2</button>
                                 <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem; left: 80%;">C1</button>
-                                <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-warning rounded-pill" style="width: 2.5rem; height:2.5rem;">C2</button>
+                                <button type="button" 
+                                        class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-warning rounded-pill"
+                                        style="width: 2.5rem; height:2.5rem;"
+                                        title="C2 Proficient: can understand with ease any kind of spoken language and can read with ease virtually all forms of written language.">C2</button>
                             </div>
                             <p class="text-secondary">3 Nov 2022</p>
                         </div>
@@ -282,23 +291,23 @@
         </div>
         <div class="row">
             <div class="sidebar col-12 col-md-3 container p-4 order-md-1 order-2 pt-0 pt-3">
-                <div class="row fs-4 principal">
+                <!-- <div class="row fs-4 principal">
                     <div class="col-2">
                         <i class="bi bi-person-vcard-fill"></i>
                     </div>
                     <div class="col-4 col-md-3">
                         <p class="mb-0">Dois</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="principal col-12 col-md-9 order-md-2 order-1 px-5 pt-4">
                 <div class="row fs-3">
                     <div class="col-1 d-flex align-items-center justify-content-center">
-                        <i class="bi bi-tools"></i>
+                        <i class="bi bi-github"></i>
                     </div>
                     <div class="col-5 col-md-3">
-                        <p class="mb-0" lang="pt-br">Habilidades</p>
-                        <p class="mb-0" lang="en" hidden>Skills</p>
+                        <p class="mb-0" lang="pt-br">Projetos</p>
+                        <p class="mb-0" lang="en" hidden>Projects</p>
                     </div>
                     <div class="col-6 col-md-8">
                         <p class="">
@@ -324,14 +333,80 @@
                         <div class="col-10 mt-2">
                             <p class="fs-5 mb-2" lang="pt-br">Um imagebord marcável feito em Django. Baseado em Danbooru.</p>
                             <p class="fs-5 mb-2" lang="en" hidden>A taggable imagebord built in Django. Based on Danbooru.</p>
-                            <div class="row">
-                                <div class="col-7 col-md-4"><p class="text-secondary">Released on 19 Nov 2018</p></div>
+                            <div class="row mt-3">
+                                <div class="col-7 col-md-4">
+                                    <p class="text-secondary" lang="pt-br">Lançado em 19 Nov 2018</p>
+                                    <p class="text-secondary" lang="en" hidden>Released on 19 Nov 2018</p>
+                                </div>
                                 <div class="col-2 col-md-8 text-end">
                                     <span class="btn btn-primary mb-2 btn-tag">Python</span>
                                     <span class="btn mb-2 btn-tag" style="--bs-btn-color:#000;--bs-btn-bg:#ffc107;">JavaScript</span>
                                     <span class="btn mb-2 btn-tag" style="--bs-btn-color:#000;--bs-btn-bg:#0dcaf0">Sqlite</span>
                                     <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#198754;">Django</span>
-                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#6f42c1;">Amazon S3</span>
+                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#000;--bs-btn-bg:#fd7e14;">HTML</span>
+                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#6f42c1;">CSS</span>
+                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#dc3545;">Amazon S3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-square-fill"></i>
+                        </div>
+                        <div class="col-10">
+                            <a href="https://github.com/ThiagoCamposTN/django-foreign-fields/" class="fs-4 mb-0">
+                                <strong>Django Foreign Fields</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-stretch justify-content-center">
+                            <div class="vr"></div>
+                        </div>
+                        <div class="col-10 mt-2">
+                            <p class="fs-5 mb-2" lang="pt-br">Um aplicativo Django com novos campos de formulário para lidar com relações estrangeiras.</p>
+                            <p class="fs-5 mb-2" lang="en" hidden>A Django app with new form fields for handling foreign relationships.</p>
+                            <div class="row mt-3">
+                                <div class="col-7 col-md-4">
+                                    <p class="text-secondary" lang="pt-br">Commitado em 3 Maio 2018</p>
+                                    <p class="text-secondary" lang="en" hidden>Commited on 3 May 2018</p>
+                                </div>
+                                <div class="col-2 col-md-8 text-end">
+                                    <span class="btn btn-primary mb-2 btn-tag">Python</span>
+                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#198754;">Django</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-square-fill"></i>
+                        </div>
+                        <div class="col-10">
+                            <a href="https://github.com/ThiagoCamposTN/SmallerFloats/" class="fs-4 mb-0">
+                                <strong>Smaller Floats</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-stretch justify-content-center">
+                            <div class="vr"></div>
+                        </div>
+                        <div class="col-10 mt-2">
+                            <p class="fs-5 mb-2" lang="pt-br">Este projeto em GDScript pode converter float em um float16 e float24 e vice-versa.</p>
+                            <p class="fs-5 mb-2" lang="en" hidden>This GDScript project can convert float into float16 and float24 and vice-versa.</p>
+                            <div class="row mt-3">
+                                <div class="col-7 col-md-4">
+                                    <p class="text-secondary" lang="pt-br">Commitado em 20 Mar 2021</p>
+                                    <p class="text-secondary" lang="en" hidden>Commited on 20 Mar 2021</p>
+                                </div>
+                                <div class="col-2 col-md-8 text-end">
+                                    <span class="btn mb-2 btn-tag" style="--bs-btn-color:#fff;--bs-btn-bg:#084298;">GDScript</span>
                                 </div>
                             </div>
                         </div>
