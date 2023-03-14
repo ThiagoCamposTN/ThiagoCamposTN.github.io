@@ -1,11 +1,13 @@
+:root {
+    --bs-link-color-rgb: 0, 0, 112;
+}
+
 .sidebar{
-    /* background-color: #66a5b5; */
-    background-color: #87ceeb;
+    background-color: #71AEF0;
 }
 
 .principal{
-    /* background-color: #d2eae7; */
-    background-color: #b4e0f2;
+    background-color: #CBDDF0;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible);
