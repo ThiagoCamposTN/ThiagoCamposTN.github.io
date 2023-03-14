@@ -24,22 +24,23 @@ function Desembaralhar(entrada, numeroBase){
 function SwitchToEnglish(){
     esta_em_pt_br = !esta_em_pt_br;
 
-    if (esta_em_pt_br){
-        document.querySelectorAll(".pt-br").forEach((text) => {
-            text.hidden = false;
-        });
+    var title = document.querySelector("title")
 
-        document.querySelectorAll(".en").forEach((text) => {
-            text.hidden = true;
-        });
+    if(esta_em_pt_br){
+        document.title = "Thiago Campos - Currículo";
+        title.lang = "pt-br";
     }
     else{
-        document.querySelectorAll(".pt-br").forEach((text) => {
-            text.hidden = true;
-        });
-
-        document.querySelectorAll(".en").forEach((text) => {
-            text.hidden = false;
-        });
+        document.title = "Thiago Campos - Resume";
+        title.lang = "en";
     }
+
+    document.body.querySelectorAll("[lang]").forEach((text) => {
+        if(text.lang == "pt-br"){
+            text.hidden = esta_em_pt_br;
+        }
+        else if(text.lang == "en"){
+            text.hidden = !esta_em_pt_br;
+        }
+    });
 }
