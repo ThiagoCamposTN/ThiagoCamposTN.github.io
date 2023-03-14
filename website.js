@@ -1,34 +1,36 @@
 var switch_de_lingua = document.querySelector("input[name='switch']");
 
 switch_de_lingua.addEventListener('change', function() {
-    TrocarLingua(this.checked);
+    let esta_em_pt_br = !this.checked; // se está checked, quer dizer que trocou para inglês
+    AtualizarLingua(esta_em_pt_br);
 });
 
-TrocarLingua(switch_de_lingua.checked);
+let esta_em_pt_br = !switch_de_lingua.checked;
+AtualizarLingua(esta_em_pt_br);
 
 function RevelarEmail(){
     document.getElementById("emailBtn").hidden = true;
-    var email = document.getElementById("email");
+    let email = document.getElementById("email");
     email.hidden = false
     email.textContent = Desembaralhar("msopaotaigcoit@ng.hcmmla", 4);
 }
 
 function Desembaralhar(entrada, numeroBase){
-    var listaBase = entrada.split("");
-    var resultado = "";
-    var numeroAtual = numeroBase;
+    let listaBase = entrada.split("");
+    let resultado = "";
+    let numeroAtual = numeroBase;
 
     while(listaBase.length > 0){
         numeroAtual = (3 * numeroAtual + 1) % listaBase.length;
-        var caracter = listaBase.splice(numeroAtual, 1);
+        let caracter = listaBase.splice(numeroAtual, 1);
         resultado += caracter;
     }
 
     return resultado;
 }
 
-function TrocarLingua(esta_em_pt_br){
-    var title = document.querySelector("title");
+function AtualizarLingua(esta_em_pt_br){
+    let title = document.querySelector("title");
 
     if (esta_em_pt_br) {
         document.title = "Thiago Campos - Currículo";
@@ -40,10 +42,10 @@ function TrocarLingua(esta_em_pt_br){
 
     document.body.querySelectorAll("[lang]").forEach((text) => {
         if(text.lang == "pt-br"){
-            text.hidden = esta_em_pt_br;
+            text.hidden = !esta_em_pt_br;
         }
         else if(text.lang == "en"){
-            text.hidden = !esta_em_pt_br;
+            text.hidden = esta_em_pt_br;
         }
     });
 }
