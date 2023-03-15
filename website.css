@@ -29,3 +29,8 @@ body {
     -moz-user-select: auto;
     user-select: auto;
 }
+
+.rounded-top-left-bottom-right {
+    border-top-left-radius      : var(--bs-border-radius) !important;
+    border-bottom-right-radius  : var(--bs-border-radius) !important;
+}
